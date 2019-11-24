@@ -101,7 +101,7 @@
                 <executions>
                     <execution>
                         <id>build-and-push-docker-image</id>
-                        <phase>package</phase>
+                        <phase>verify</phase>
                         <goals>
                             <goal>build</goal>
                         </goals>
