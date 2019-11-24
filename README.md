@@ -11,3 +11,5 @@
 http://127.0.0.1:9000/gateway-dev.yml
 http://127.0.0.1:9000/gateway.yml
 http://127.0.0.1:9000/gateway-prod.yml
+
+配合jib,docker镜像构建插件，来完成镜像的构建
