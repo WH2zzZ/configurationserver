@@ -1,6 +1,9 @@
 name: Java CI
 
 on: [push]
+env:
+  PASSWORD: ${{secrets.DOCKER_ALIYUN_SECRET}}
+  USERNAME: ${{secrets.DOCKER_ALIYUN_USERNAME}}
 
 jobs:
   build:
@@ -12,5 +15,5 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: mvn -B package --file pom.xml
+      run: mvn package -Djib.to.auth.username=$USERNAME -Djib.to.auth.password=$PASSWORD -Djib.from.auth.username=$USERNAME -Djib.from.auth.password=$PASSWORD --file pom.xml
 
