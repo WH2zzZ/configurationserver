@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.config.server.EnableConfigServer;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
@@ -14,7 +15,12 @@ import java.net.UnknownHostException;
 import java.util.Arrays;
 import java.util.Collection;
 
+/**
+ * 允许访问/refresh断点，强制配置服务重新读取应用程序配置
+ * @author wanghan
+ */
 @Slf4j
+@RefreshScope
 @SpringBootApplication
 @EnableConfigServer
 public class ConfigurationserverApplication {
