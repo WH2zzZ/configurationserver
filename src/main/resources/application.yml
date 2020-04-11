@@ -4,6 +4,6 @@ spring:
       server:
         git:
           uri: https://github.com/WH2zzZ/config-center.git
-          search-paths: /microserver/gateway, /microserver/memberserver
+          search-paths: /microserver/gateway, /microserver/memberserver, /microserver/register
           username: WH2zzZ
           password: wh942966
